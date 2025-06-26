@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minh Duc's Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto Mono', monospace;
@@ -51,6 +52,69 @@
             color: #00B8D4;
             text-decoration: underline;
         }
+        /* CSS cho phần giới thiệu App */
+        .app-section {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid #333; /* Đường kẻ phân cách */
+        }
+        .app-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Khoảng cách giữa icon và chữ */
+            margin-top: 20px;
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        .app-icon {
+            width: 70px; /* Kích thước icon */
+            height: 70px;
+            border-radius: 15px; /* Bo tròn góc */
+            object-fit: cover;
+            border: 2px solid #00C853;
+        }
+        .app-details {
+            text-align: left;
+        }
+        .app-details h2 {
+            margin: 0;
+            color: #4CAF50; /* Màu xanh lá cây */
+            font-size: 1.5em;
+        }
+        .app-details p {
+            margin: 5px 0 15px 0;
+            font-size: 0.9em;
+            color: #9E9E9E;
+        }
+        .download-button {
+            display: inline-block;
+            background-color: #00C853; /* Màu nền nút */
+            color: #121212; /* Màu chữ nút */
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px; /* Bo tròn nút */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.3);
+        }
+        .download-button:hover {
+            background-color: #00A142;
+            transform: translateY(-2px);
+        }
+        .download-button .fa-google-play {
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
         @keyframes slideIn {
             from { transform: translateX(-50px); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
@@ -66,6 +130,21 @@
             <p><strong><a href="mailto:minhduc0029@gmail.com">minhduc0029@gmail.com</a></strong></p>
             <p>Thank you for visiting!</p>
         </div>
+
+        <section class="app-section">
+            <p style="font-size: 1.2em; color: #4CAF50; font-weight: bold;">Check out my app on Google Play!</p>
+            <div class="app-card">
+                <img src="vocabflash_icon.png" alt="VocabFlash App Icon" class="app-icon">
+                <div class="app-details">
+                    <h2>VocabFlash - Flashcards App</h2>
+                    <p>Learn new words efficiently with flashcards. Study anywhere, anytime!</p>
+                    <a href="https://play.google.com/store/apps/details?id=dev.minhduc.vocabflash" target="_blank" class="download-button">
+                        <i class="fab fa-google-play"></i> Download on Google Play
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </div>
 </body>
 </html>
