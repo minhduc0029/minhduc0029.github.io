@@ -116,6 +116,10 @@
             margin-right: 8px;
             font-size: 1.1em;
         }
+        /* Style cho khoảng cách giữa các app card */
+        .app-card + .app-card {
+            margin-top: 25px; /* Thêm khoảng cách giữa các card app */
+        }
         @keyframes slideIn {
             from { transform: translateX(-50px); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
@@ -124,45 +128,45 @@
         /* MEDIA QUERY: CSS cho giao diện mobile */
         @media (max-width: 768px) {
             body {
-                padding: 20px; /* Giảm padding trên mobile */
+                padding: 20px;
             }
             .container {
-                padding: 30px 20px; /* Tăng padding ngang để dễ đọc hơn */
-                margin: 10px; /* Giảm margin */
+                padding: 30px 20px;
+                margin: 10px;
                 max-width: 100%;
-                border-left: none; /* Bỏ đường kẻ viền trái */
+                border-left: none;
             }
             h1 {
-                font-size: 1.8em; /* Giảm cỡ chữ tiêu đề */
+                font-size: 1.8em;
             }
             p {
-                font-size: 1em; /* Giữ nguyên cỡ chữ */
+                font-size: 1em;
             }
             .app-section {
                 padding-top: 30px;
             }
             .app-card {
-                flex-direction: column; /* Sắp xếp các thành phần theo cột */
-                text-align: center; /* Căn giữa nội dung trong card */
+                flex-direction: column;
+                text-align: center;
                 padding: 25px;
             }
             .app-icon {
-                width: 90px; /* Tăng kích thước icon trên mobile để nổi bật */
+                width: 90px;
                 height: 90px;
-                margin-bottom: 15px; /* Thêm khoảng cách dưới icon */
+                margin-bottom: 15px;
             }
             .app-details {
-                text-align: center; /* Căn giữa chữ trên mobile */
+                text-align: center;
             }
             .app-details h2 {
-                font-size: 1.3em; /* Giảm cỡ chữ tên app */
+                font-size: 1.3em;
             }
             .download-button {
-                padding: 15px 30px; /* Tăng kích thước nút */
-                font-size: 1.1em; /* Tăng cỡ chữ nút */
-                width: 80%; /* Chiếm 80% chiều rộng */
+                padding: 15px 30px;
+                font-size: 1.1em;
+                width: 80%;
                 max-width: 300px;
-                margin-top: 15px; /* Thêm khoảng cách trên nút */
+                margin-top: 15px;
             }
         }
     </style>
@@ -178,7 +182,8 @@
         </div>
 
         <section class="app-section">
-            <p style="font-size: 1.2em; color: #4CAF50; font-weight: bold;">Check out my app on Google Play!</p>
+            <p style="font-size: 1.2em; color: #4CAF50; font-weight: bold;">Check out my apps on Google Play!</p>
+            
             <div class="app-card">
                 <img src="Icon_VocabFlash.png" alt="VocabFlash App Icon" class="app-icon">
                 <div class="app-details">
@@ -189,6 +194,18 @@
                     </a>
                 </div>
             </div>
+
+            <div class="app-card">
+                <img src="Icon_heart_love_splash.png" alt="CoupleSync App Icon" class="app-icon">
+                <div class="app-details">
+                    <h2>CoupleSync - Love & Memories</h2>
+                    <p>Stay connected with your partner. Share moments and create a timeline of your love story!</p>
+                    <a href="https://minhduc0029.github.io/" target="_blank" class="download-button">
+                        <i class="fab fa-google-play"></i> Coming soon on Google Play
+                    </a>
+                </div>
+            </div>
+
         </section>
 
     </div>
