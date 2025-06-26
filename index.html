@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh Duc's Website</title>
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            text-align: center;
+            padding: 50px;
+            background-color: #121212; /* Very dark gray/black */
+            color: #E0E0E0; /* Light gray for text */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #1E1E1E; /* Slightly lighter dark gray */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            margin: 20px;
+            border-left: 5px solid #00C853; /* Accent color: bright green */
+            animation: slideIn 1s ease-out;
+        }
+        h1 {
+            color: #4CAF50; /* Green accent for heading */
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #BDBDBD;
+            line-height: 1.6;
+            font-size: 1em;
+        }
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: #00E5FF; /* Cyan/aqua link color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #00B8D4;
+            text-decoration: underline;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Minhduc's website!</h1>
+        <p>This is my personal page. I will share my projects and updates here.</p>
+        <div class="contact-info">
+            <p>To contact me, please send an email to:</p>
+            <p><strong><a href="mailto:minhduc0029@gmail.com">minhduc0029@gmail.com</a></strong></p>
+            <p>Thank you for visiting!</p>
+        </div>
+    </div>
+</body>
+</html>
