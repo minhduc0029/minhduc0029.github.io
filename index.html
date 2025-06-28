@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minh Duc's Website</title>
+    <!-- Thêm thư viện Font Awesome để dùng icon Google Play -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         /* CSS cho desktop và màn hình lớn */
@@ -116,9 +117,11 @@
             background-color: #00A142;
             transform: translateY(-2px);
         }
+        /* Bỏ icon Google Play cho nút tải APK */
         .download-button .fa-google-play {
             margin-right: 8px;
             font-size: 1.1em;
+            display: none; /* Ẩn icon Google Play */
         }
         /* Style cho khoảng cách giữa các app card */
         .app-card + .app-card {
@@ -190,9 +193,11 @@
             <p>Thank you for visiting!</p>
         </div>
 
+        <!-- Phần giới thiệu App -->
         <section class="app-section">
             <p style="font-size: 1.2em; color: #4CAF50; font-weight: bold;">Check out my apps on Google Play!</p>
             
+            <!-- App 1: VocabFlash -->
             <div class="app-card">
                 <img src="Icon_VocabFlash.png" alt="VocabFlash App Icon" class="app-icon">
                 <div class="app-details">
@@ -204,6 +209,7 @@
                 </div>
             </div>
 
+            <!-- App 2: CoupleSync -->
             <div class="app-card">
                 <img src="Icon_heart_love_splash.png" alt="CoupleSync App Icon" class="app-icon">
                 <div class="app-details">
@@ -215,13 +221,15 @@
                 </div>
             </div>
             
+            <!-- App 3: Doodle Guess -->
             <div class="app-card">
                 <img src="Doodle_Guess.png" alt="Doodle Guess App Icon" class="app-icon doodle-guess-icon">
                 <div class="app-details">
                     <h2>Doodle Guess - Drawing Game</h2>
                     <p>A fun and creative drawing game to play with friends and family!</p>
-                    <a href="https://minhduc0029.github.io/" target="_blank" class="download-button">
-                        <i class="fab fa-google-play"></i> Coming soon on Google Play
+                    <!-- Cập nhật link tải và nội dung nút -->
+                    <a href="https://drive.usercontent.google.com/download?id=1F8Wql00SKJ7zkDUTVnvhmxkgRLLD-8-M&export=download&authuser=0" target="_blank" class="download-button">
+                        Download APK
                     </a>
                 </div>
             </div>
