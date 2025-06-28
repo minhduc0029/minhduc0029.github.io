@@ -79,8 +79,12 @@
             width: 70px;
             height: 70px;
             border-radius: 15px;
-            object-fit: cover;
+            object-fit: cover; /* Mặc định là cover, cắt ảnh để lấp đầy khung */
             border: 2px solid #00C853;
+        }
+        /* CSS riêng cho icon Doodle Guess để fit vào khung */
+        .app-icon.doodle-guess-icon {
+            object-fit: contain; /* Thay đổi thành contain để hiển thị toàn bộ ảnh */
         }
         .app-details {
             text-align: left;
@@ -155,6 +159,11 @@
                 height: 90px;
                 margin-bottom: 15px;
             }
+            /* Điều chỉnh kích thước icon Doodle Guess trên mobile nếu cần */
+            .app-icon.doodle-guess-icon {
+                width: 90px;
+                height: 90px;
+            }
             .app-details {
                 text-align: center;
             }
@@ -181,43 +190,43 @@
             <p>Thank you for visiting!</p>
         </div>
 
-<section class="app-section">
-    <p style="font-size: 1.2em; color: #4CAF50; font-weight: bold;">Check out my apps on Google Play!</p>
-    
-    <div class="app-card">
-        <img src="Icon_VocabFlash.png" alt="VocabFlash App Icon" class="app-icon">
-        <div class="app-details">
-            <h2>VocabFlash - Flashcards App</h2>
-            <p>Learn new words efficiently with flashcards. Study anywhere, anytime!</p>
-            <a href="[https://play.google.com/store/apps/details?id=dev.minhduc.vocabflash](https://play.google.com/store/apps/details?id=dev.minhduc.vocabflash)" target="_blank" class="download-button">
-                <i class="fab fa-google-play"></i> Download on Google Play
-            </a>
-        </div>
-    </div>
+        <section class="app-section">
+            <p style="font-size: 1.2em; color: #4CAF50; font-weight: bold;">Check out my apps on Google Play!</p>
+            
+            <div class="app-card">
+                <img src="Icon_VocabFlash.png" alt="VocabFlash App Icon" class="app-icon">
+                <div class="app-details">
+                    <h2>VocabFlash - Flashcards App</h2>
+                    <p>Learn new words efficiently with flashcards. Study anywhere, anytime!</p>
+                    <a href="https://play.google.com/store/apps/details?id=dev.minhduc.vocabflash" target="_blank" class="download-button">
+                        <i class="fab fa-google-play"></i> Download on Google Play
+                    </a>
+                </div>
+            </div>
 
-    <div class="app-card">
-        <img src="Icon_heart_love_splash.png" alt="CoupleSync App Icon" class="app-icon">
-        <div class="app-details">
-            <h2>CoupleSync - Love & Memories</h2>
-            <p>Stay connected with your partner. Share moments and create a timeline of your love story!</p>
-            <a href="[https://minhduc0029.github.io/](https://minhduc0029.github.io/)" target="_blank" class="download-button">
-                <i class="fab fa-google-play"></i> Coming soon on Google Play
-            </a>
-        </div>
-    </div>
-    
-    <div class="app-card">
-        <img src="Doodle_Guess.png" alt="Doodle Guess App Icon" class="app-icon doodle-guess-icon">
-        <div class="app-details">
-            <h2>Doodle Guess - Drawing Game</h2>
-            <p>A fun and creative drawing game to play with friends and family!</p>
-            <a href="[https://minhduc0029.github.io/](https://minhduc0029.github.io/)" target="_blank" class="download-button">
-                <i class="fab fa-google-play"></i> Coming soon on Google Play
-            </a>
-        </div>
-    </div>
+            <div class="app-card">
+                <img src="Icon_heart_love_splash.png" alt="CoupleSync App Icon" class="app-icon">
+                <div class="app-details">
+                    <h2>CoupleSync - Love & Memories</h2>
+                    <p>Stay connected with your partner. Share moments and create a timeline of your love story!</p>
+                    <a href="https://minhduc0029.github.io/" target="_blank" class="download-button">
+                        <i class="fab fa-google-play"></i> Coming soon on Google Play
+                    </a>
+                </div>
+            </div>
+            
+            <div class="app-card">
+                <img src="Doodle_Guess.png" alt="Doodle Guess App Icon" class="app-icon doodle-guess-icon">
+                <div class="app-details">
+                    <h2>Doodle Guess - Drawing Game</h2>
+                    <p>A fun and creative drawing game to play with friends and family!</p>
+                    <a href="https://minhduc0029.github.io/" target="_blank" class="download-button">
+                        <i class="fab fa-google-play"></i> Coming soon on Google Play
+                    </a>
+                </div>
+            </div>
 
-</section>
+        </section>
 
     </div>
 </body>
