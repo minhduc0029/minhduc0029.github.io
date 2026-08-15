@@ -1,235 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minh Duc's Website</title>
+    <title>365 Transport - Vận Tải 365</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        /* CSS cho desktop và màn hình lớn */
+        :root {
+            --primary-color: #1a2942; /* Xanh đen giống sidebar TMS */
+            --secondary-color: #0d6efd; /* Xanh dương nổi bật */
+            --text-color: #333;
+            --bg-color: #f4f6f9; /* Nền xám nhạt */
+        }
+
         body {
-            font-family: 'Roboto Mono', monospace;
-            text-align: center;
-            padding: 50px;
-            background-color: #121212;
-            color: #E0E0E0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
-        .container {
-            background-color: #1E1E1E;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-            max-width: 600px;
-            margin: 20px;
-            border-left: 5px solid #00C853;
-            animation: slideIn 1s ease-out;
-        }
-        h1 {
-            color: #4CAF50;
-            font-size: 2.2em;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #BDBDBD;
-            line-height: 1.6;
-            font-size: 1em;
-        }
-        .contact-info {
-            margin-top: 30px;
-            font-size: 1.1em;
-        }
-        .contact-info a {
-            color: #00E5FF;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .contact-info a:hover {
-            color: #00B8D4;
-            text-decoration: underline;
-        }
-        
-        /* Phần CSS cho App Section */
-        .app-section {
-            margin-top: 50px;
-            padding-top: 40px;
-            border-top: 1px solid #333;
-        }
-        .app-card {
-            display: flex; /* Dùng flexbox */
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            background-color: #282828;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-        .app-card:hover {
-            transform: translateY(-5px);
-        }
-        .app-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 15px;
-            object-fit: cover; /* Mặc định là cover, cắt ảnh để lấp đầy khung */
-            border: 2px solid #00C853;
-        }
-        /* CSS riêng cho icon Doodle Guess để fit vào khung */
-        .app-icon.doodle-guess-icon {
-            object-fit: contain; /* Thay đổi thành contain để hiển thị toàn bộ ảnh */
-        }
-        .app-details {
-            text-align: left;
-        }
-        .app-details h2 {
-            margin: 0;
-            color: #4CAF50;
-            font-size: 1.5em;
-        }
-        .app-details p {
-            margin: 5px 0 15px 0;
-            font-size: 0.9em;
-            color: #9E9E9E;
-        }
-        .download-button {
-            display: inline-block;
-            background-color: #00C853;
-            color: #121212;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.3);
-        }
-        .download-button:hover {
-            background-color: #00A142;
-            transform: translateY(-2px);
-        }
-        /* Bỏ icon Google Play cho nút tải APK */
-        .download-button .fa-google-play {
-            margin-right: 8px;
-            font-size: 1.1em;
-            display: none; /* Ẩn icon Google Play */
-        }
-        /* Style cho khoảng cách giữa các app card */
-        .app-card + .app-card {
-            margin-top: 25px; /* Thêm khoảng cách giữa các card app */
-        }
-        @keyframes slideIn {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+
+        /* Phần Banner phía trên cùng */
+        .hero-banner {
+            width: 100%;
+            height: 250px;
+            background-image: url('banner365.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* MEDIA QUERY: CSS cho giao diện mobile */
+        /* Lớp phủ mờ cho banner để nổi bật logo nếu cần */
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(26, 41, 66, 0.4);
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 800px;
+            margin-top: -60px; /* Kéo khung nội dung đè lên banner một chút */
+            position: relative;
+            z-index: 10;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: -80px; /* Đẩy logo nhô lên khỏi khung */
+            background-color: #fff;
+            object-fit: contain;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin: 15px 0 5px 0;
+            text-transform: uppercase;
+        }
+
+        .slogan {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            text-align: left;
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 35px;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+            font-size: 1.05em;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--secondary-color);
+            width: 30px;
+            font-size: 1.2em;
+            margin-top: 3px;
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Nút bấm Hệ thống */
+        .system-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            min-width: 250px;
+        }
+
+        .btn i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-3px);
+        }
+
+        .btn-disabled {
+            background-color: #e9ecef;
+            color: #6c757d;
+            border: 1px dashed #adb5bd;
+            cursor: not-allowed;
+        }
+
+        .btn-disabled:hover {
+            background-color: #f8f9fa;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-bottom: 20px;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
             .container {
-                padding: 30px 20px;
-                margin: 10px;
-                max-width: 100%;
-                border-left: none;
+                width: 95%;
+                padding: 25px 15px;
             }
-            h1 {
-                font-size: 1.8em;
-            }
-            p {
-                font-size: 1em;
-            }
-            .app-section {
-                padding-top: 30px;
-            }
-            .app-card {
+            .system-actions {
                 flex-direction: column;
-                text-align: center;
-                padding: 25px;
             }
-            .app-icon {
-                width: 90px;
-                height: 90px;
-                margin-bottom: 15px;
-            }
-            /* Điều chỉnh kích thước icon Doodle Guess trên mobile nếu cần */
-            .app-icon.doodle-guess-icon {
-                width: 90px;
-                height: 90px;
-            }
-            .app-details {
-                text-align: center;
-            }
-            .app-details h2 {
-                font-size: 1.3em;
-            }
-            .download-button {
-                padding: 15px 30px;
-                font-size: 1.1em;
-                width: 80%;
-                max-width: 300px;
-                margin-top: 15px;
+            .btn {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
+
+    <div class="hero-banner"></div>
+
     <div class="container">
-        <h1>Welcome to Minhduc's website!</h1>
-        <p>This is my personal page. I will share my projects and updates here.</p>
+        <img src="logo365.jpg" alt="Logo Vận Tải 365" class="logo">
+        
+        <h1>Vận Tải 365</h1>
+        <p class="slogan">CUNG CẤP GIẢI PHÁP LOGISTICS TOÀN QUỐC</p>
+
         <div class="contact-info">
-            <p>To contact me, please send an email to:</p>
-            <p><strong><a href="mailto:minhduc0029@gmail.com">minhduc0029@gmail.com</a></strong></p>
-            <p>Thank you for visiting!</p>
+            <p><i class="fas fa-map-marker-alt"></i> <span>547A Đường lộ Hậu Tân Thạnh Tây, KV3, Ba Láng, Q. Cái Răng, TP. Cần Thơ, Vietnam</span></p>
+            <p><i class="fas fa-phone-alt"></i> <span><a href="tel:0354900707">035 490 0707</a></span></p>
+            <p><i class="fas fa-envelope"></i> <span><a href="mailto:vantai365ngaydem@gmail.com">vantai365ngaydem@gmail.com</a></span></p>
         </div>
 
-        <section class="app-section">
-            <p style="font-size: 1.2em; color: #4CAF50; font-weight: bold;">Check out my apps on Google Play!</p>
+        <h3 style="color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; display: inline-block;">HỆ THỐNG QUẢN TRỊ NỘI BỘ</h3>
+        
+        <div class="system-actions">
+            <!-- Nút vào hệ thống TMS -->
+            <a href="https://365transport.vn/dieutai365/" class="btn btn-primary">
+                <i class="fas fa-truck-fast"></i> Quản Lý Điều Phối
+            </a>
             
-            <div class="app-card">
-                <img src="Icon_VocabFlash.png" alt="VocabFlash App Icon" class="app-icon">
-                <div class="app-details">
-                    <h2>VocabFlash - Flashcards App</h2>
-                    <p>Learn new words efficiently with flashcards. Study anywhere, anytime!</p>
-                    <a href="https://play.google.com/store/apps/details?id=dev.minhduc.vocabflash" target="_blank" class="download-button">
-                        <i class="fab fa-google-play"></i> Download on Google Play
-                    </a>
-                </div>
-            </div>
-            
-            <div class="app-card">
-                <img src="Doodle_Guess.png" alt="Doodle Guess App Icon" class="app-icon doodle-guess-icon">
-                <div class="app-details">
-                    <h2>Vẽ Nhanh Đoán Hình</h2>
-                    <p>A fun and creative drawing game to play with friends and family!</p>
-                    <a href="https://play.google.com/store/apps/details?id=dev.minhduc.doodleguess" target="_blank" class="download-button">
-                        <i class="fab fa-google-play"></i> Download on Google Play
-                    </a>
-                </div>
-            </div>
-            
-            <div class="app-card">
-                <img src="Icon_heart_love_splash.png" alt="CoupleSync App Icon" class="app-icon">
-                <div class="app-details">
-                    <h2>CoupleSync - Love & Memories</h2>
-                    <p>Stay connected with your partner. Share moments and create a timeline of your love story!</p>
-                    <a href="https://minhduc0029.github.io/" target="_blank" class="download-button">
-                        <i class="fab fa-google-play"></i> Coming soon on Google Play
-                    </a>
-                </div>
-            </div>
-
-        </section>
-
+            <!-- Nút Kho vật tư (Bấm vào sẽ hiện thông báo) -->
+            <button class="btn btn-disabled" onclick="alert('Module Quản lý kho vật tư thiết bị hiện đang được xây dựng. Vui lòng quay lại sau!')">
+                <i class="fas fa-boxes-stacked"></i> Quản Lý Kho Vật Tư
+            </button>
+        </div>
     </div>
+
+    <div class="footer">
+        &copy; 2026 365 Transport. Cung cấp bởi hệ thống nội bộ.
+    </div>
+
 </body>
 </html>
